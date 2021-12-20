@@ -7,13 +7,12 @@ In my version, hydra is represented by parenthesis like this:
 (()()) is a hydra with two heads and so on. 
 
 To chop a head off, you find the first head [()] starting from the left, remove it and replicate the set it was immediately contained in n times unless it is the outermost set (base case) 
-For example: 
+For example:
+```
 (()), n = 2 ----> () (base case)
-
 (()()), n = 2----> (()) (also base case)
-
 ((()())()), n = 2 ----> ((())(())()) 
-
+```
 To run the game, I start with n = 1 and increase it every time I call Hydra function. For small initial hydras, the game terminates quickly: 
 ```
 input: (()(((()))))
